@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		<meta name="generator" content="Scirra Construct">
+		<meta name="author" content="com.gamedistudio.com">
+		<meta name="description" content="game puzzle">
+		<link rel="manifest" href="appmanifest.json">
+		<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+		<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+		<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+		<link rel="icon" type="image/png" href="icons/icon-512.png">
+
+		<link rel="stylesheet" href="{{asset('themes/base/style.css')}}">
+		{% block javascripts %}
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
+
+	</head>
+	<body>
+
+		{% block body %}{% endblock %}
+
+		{% include "partials/base/_footer.html.twig" %}
+
+		<script src="{{asset('themes/base/scripts/supportcheck.js')}}"></script>
+		<script src="{{asset('themes/base/scripts/offlineclient.js')}}" type="module"></script>
+		<script src="{{asset('themes/base/scripts/main.js')}}" type="module"></script>
+		<script src="{{asset('themes/base/scripts/register-sw.js')}}" type="module"></script>
+
+	</body>
 </html>

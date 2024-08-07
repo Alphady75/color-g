@@ -1,3 +1,21 @@
-body {
-    background-color: skyblue;
+:root {
+  --light-yellow: #fdf7ec;
+  --primary: #FD7B2D;
+  --dark-black: #181a22;
+  --dark-greay: #9599ab;
+  --black: #000000;
+  --text-white: #ffffff;
+  --bg-white: #ffffff;
+}
+footer{
+  text-align: center;
+  padding: 15px;
+}
+footer a{
+  color: white;
+  display: inline-block;
+  padding: 5px;
+}
+footer a::first-letter{
+  font-size: 1.5em;
 }
