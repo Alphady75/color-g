@@ -10,11 +10,11 @@
 		<meta name="generator" content="Scirra Construct">
 		<meta name="author" content="com.gamedistudio.com">
 		<meta name="description" content="game puzzle">
-		<link rel="manifest" href="appmanifest.json">
-		<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
-		<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
-		<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
-		<link rel="icon" type="image/png" href="icons/icon-512.png">
+		<link rel="manifest" href="{{asset('themes/base/appmanifest.json')}}">
+		<link rel="apple-touch-icon" sizes="128x128" href="{{asset('themes/base/icons/icon-128.png')}}">
+		<link rel="apple-touch-icon" sizes="256x256" href="{{asset('themes/base/icons/icon-256.png')}}">
+		<link rel="apple-touch-icon" sizes="512x512" href="{{asset('themes/base/icons/icon-512.png')}}">
+		<link rel="icon" type="image/png" href="{{asset('themes/base/icons/icon-512.png')}}">
 
 		<link rel="stylesheet" href="{{asset('themes/base/style.css')}}">
 		{% block javascripts %}
@@ -24,7 +24,7 @@
 		{% endblock %}
 
 	</head>
-	<body>
+	<body data-turbo="false">
 
 		{% block body %}{% endblock %}
 
